@@ -4,6 +4,7 @@ public class Player {
     private int gamesPlayed;
     private int numActions;
 
+
     public Player(int possibleActions) {
         this.strategy = new double[possibleActions];
         this.gamesPlayed = 0;
@@ -25,7 +26,7 @@ public class Player {
             sum += this.strategy[i];
             if (sum >= rand) return i;
         }
-        return  ((int)(Math.random() * ((this.numActions) + 1)));
+        return ((int)(Math.random() * ((this.numActions) + 1)));
     }
 
     public void setGameRegret(int[] regret) {
